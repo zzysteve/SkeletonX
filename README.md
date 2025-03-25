@@ -3,4 +3,4 @@ This repo is the official implementation for SkeletonX: Data-Efficient Skeleton-
 
 The paper has been accepted by IEEE Transaction on Multimedia (TMM).
 
-Code comming soon.
+Code coming soon.
