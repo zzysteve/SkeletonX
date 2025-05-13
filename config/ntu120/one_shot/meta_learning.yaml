@@ -1,0 +1,102 @@
+CA_mode: null
+DASP_mixup_ep: -1
+SADP_mixup_ep: -1
+abl_zeroout: null
+anchor_feeder_args:
+  bone: false
+  data_path: data/ntu120/NTU120_1Shot.npz
+  debug: false
+  p_interval:
+  - 0.95
+  split: anchor
+  vel: false
+  window_size: 64
+aug_base_lr: 0.002
+aux_feeder_args:
+  bone: false
+  data_path: data/ntu120/NTU120_1Shot.npz
+  debug: false
+  normalization: false
+  p_interval:
+  - 0.5
+  - 1
+  random_rot: false
+  split: aux
+  vel: false
+  window_size: 64
+base_lr: 0.001
+batch_size: 1
+bone: false
+config: config/ntu120/one_shot/meta_learning.yaml
+device:
+- 0
+- 1
+eval_feeder_args:
+  bone: false
+  data_path: data/ntu120/NTU120_1Shot.npz
+  debug: false
+  p_interval:
+  - 0.95
+  split: eval
+  vel: false
+  window_size: 64
+eval_interval: 1
+eval_mask_subject: false
+eval_mode: ntu120
+feat_aggr_mode: null
+feeder: feeders.feeder_ntu.Feeder
+ignore_weights: []
+it_per_ep: 100
+knn_metric: cosine
+log_interval: 100
+loss_type: CE
+lr_decay_rate: 0.5
+metric_func: null
+model: model.ctrgcn.Model
+model_args:
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 120
+  num_person: 2
+  num_point: 25
+model_saved_name: ''
+nesterov: true
+num_episode: 1000
+num_epoch: 50
+num_query: 3
+num_shot: 1
+num_way: 20
+num_worker: 0
+one_shot_class_group: null
+optimizer: SGD
+phase: train
+pred_threshold: 0.0
+print_log: true
+save_epoch: 5
+save_interval: 1
+save_score: false
+save_sim_mat: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 30
+test_batch_size: 1
+test_feeder_args: {}
+test_output_subject: false
+train_feeder_args: {}
+use_p_map: true
+vel: false
+w_SA: null
+w_SP: null
+w_mixup: 0.1
+w_xsample: 0.1
+warm_up_epoch: 0
+weight_decay: 0.0004
+weights: results/ntu120/st_decouple/best_acc.pt
+work_dir: results/ntu120/st_decouple_meta
+x_DASP: false
+x_SADP: false

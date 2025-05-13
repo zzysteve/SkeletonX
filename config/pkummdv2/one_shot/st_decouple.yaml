@@ -1,0 +1,95 @@
+CA_mode: null
+DASP_mixup_ep: -1
+SADP_mixup_ep: -1
+abl_zeroout: null
+anchor_feeder_args:
+  bone: false
+  data_path: data/PKUMMDv2/PKUMMDv2_1Shot.npz
+  debug: false
+  p_interval:
+  - 0.95
+  split: anchor
+  vel: false
+  window_size: 64
+aug_base_lr: 0.002
+aux_feeder_args:
+  bone: false
+  data_path: data/PKUMMDv2/PKUMMDv2_1Shot.npz
+  debug: false
+  normalization: false
+  p_interval:
+  - 0.5
+  - 1
+  random_rot: false
+  split: aux
+  train_indices_info_path: data/PKUMMDv2/one-shot_aux_info.csv
+  vel: false
+  window_size: 64
+base_lr: 0.1
+batch_size: 32
+bone: false
+device:
+- 0
+eval_feeder: feeders.feeder_pkummd.Feeder
+eval_feeder_args:
+  bone: false
+  data_path: data/PKUMMDv2/PKUMMDv2_1Shot.npz
+  debug: false
+  p_interval:
+  - 0.95
+  split: eval
+  vel: false
+  window_size: 64
+eval_interval: 1
+eval_mask_subject: false
+feat_aggr_mode: concat
+feeder: feeders.feeder_pkummd_subject.Feeder
+ignore_weights: []
+knn_metric: cosine
+log_interval: 100
+loss_type: CE
+lr_decay_rate: 0.1
+metric_func: null
+model: model.ctrgcn.Model
+model_args:
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 41
+  num_person: 2
+  num_point: 25
+model_saved_name: ''
+nesterov: true
+num_epoch: 25
+num_worker: 32
+one_shot_class_group: null
+optimizer: SGD
+phase: train
+pred_threshold: 0.0
+print_log: true
+save_epoch: 5
+save_interval: 1
+save_score: false
+save_sim_mat: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 10
+- 15
+test_batch_size: 64
+test_feeder_args: {}
+test_output_subject: false
+train_feeder_args: {}
+use_p_map: true
+w_SA: null
+w_SP: null
+w_xsample: 0.1
+warm_up_epoch: 5
+weight_decay: 0.0004
+weights: null
+work_dir: results/pkummdv2/st_decouple
+x_DASP: true
+x_SADP: true

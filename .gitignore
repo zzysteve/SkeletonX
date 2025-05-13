@@ -1,0 +1,25 @@
+*.pyc
+*.pt
+*.pyo
+*.csv
+*.pkl
+*.txt
+*.amax
+*.bak
+*.svg
+*.prof
+*.npz
+*.pt
+
+.vscode
+
+# ignore running logs
+logs
+
+# ignore results
+results
+
+# ignore raw data
+data/nturgbd_raw
+data/PKUMMDv2/skeletons
+data/PKUMMDv2/label
