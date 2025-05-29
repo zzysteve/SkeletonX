@@ -6,7 +6,7 @@ This repo is the official implementation for [SkeletonX: Data-Efficient Skeleton
 ![image](src/overview.png)
 
 # Prerequisites
-
+- Anaconda (or Miniconda)
 - Python >= 3.6
 - PyTorch >= 1.1.0
 - PyYAML, tqdm, tensorboardX
@@ -17,6 +17,7 @@ We have tested the following configurations on NVIDIA RTX 2080 Ti and V100 GPU.
 
 ```bash
 conda create -n skeletonx python=3.6
+conda activate skeletonx
 conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
 pip install -r requirements.txt
 pip install -e torchlight
