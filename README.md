@@ -237,9 +237,14 @@ Please cite this work if you find it useful:
 
 ```
 @article{zhang2025skeletonx,
-  title={SkeletonX: Data-Efficient Skeleton-based Action Recognition via Cross-sample Feature Aggregation},
-  author={Zhang, Zongye and Cai, Wenrui and Liu, Qingjie and Wang, Yunhong},
-  journal={arXiv preprint arXiv:2504.11749},
-  year={2025}
+  title = {SkeletonX: Data-Efficient Skeleton-based Action Recognition via Cross-sample Feature Aggregation},
+  author = {Zhang, Zongye and Cai, Wenrui and Liu, Qingjie and Wang, Yunhong},
+  year = 2025,
+  journal = {IEEE Transactions on Multimedia},
+  publisher = {IEEE},
+  volume = {},
+  number = {},
+  pages = {1--13},
+  note = {early access, doi: {\color{blue} \href{https://doi.org/10.1109/TMM.2025.3618561}{10.1109/TMM.2025.3618561}}}
 }
 ```
