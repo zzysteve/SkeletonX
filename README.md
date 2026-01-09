@@ -5,6 +5,21 @@ This repo is the official implementation for [SkeletonX: Data-Efficient Skeleton
 
 ![image](src/overview.png)
 
+
+If you find our code or paper helpful, please consider starring our repository and citing:
+
+```
+@article{zhang2025skeletonx,
+  title = {SkeletonX: Data-Efficient Skeleton-based Action Recognition via Cross-sample Feature Aggregation},
+  author = {Zhang, Zongye and Cai, Wenrui and Liu, Qingjie and Wang, Yunhong},
+  year = 2025,
+  journal = {IEEE Transactions on Multimedia},
+  publisher = {IEEE},
+  volume = {27},
+  pages = {9646 - 9658},
+}
+```
+
 # Prerequisites
 - Anaconda (or Miniconda)
 - Python >= 3.6
@@ -230,21 +245,3 @@ python main_xmix.py --config config/ntu/limited_scale/ours_10_LB.yaml --work-dir
 This repo is mainly based on [CTR-GCN](https://github.com/Uason-Chen/CTR-GCN), we also refer to [ST-GCN](https://github.com/yysijie/st-gcn), [2s-AGCN](https://github.com/lshiwjx/2s-AGCN), [TCA-GCN](https://github.com/OrdinaryQin/TCA-GCN), [BlockGCN](https://github.com/ZhouYuxuanYX/BlockGCN), [FR-HEAD](https://github.com/zhysora/FR-Head).
 
 Thanks to these authors for their excellent work!
-
-# Citation
-
-Please cite this work if you find it useful:
-
-```
-@article{zhang2025skeletonx,
-  title = {SkeletonX: Data-Efficient Skeleton-based Action Recognition via Cross-sample Feature Aggregation},
-  author = {Zhang, Zongye and Cai, Wenrui and Liu, Qingjie and Wang, Yunhong},
-  year = 2025,
-  journal = {IEEE Transactions on Multimedia},
-  publisher = {IEEE},
-  volume = {},
-  number = {},
-  pages = {1--13},
-  note = {early access, doi: {\color{blue} \href{https://doi.org/10.1109/TMM.2025.3618561}{10.1109/TMM.2025.3618561}}}
-}
-```
